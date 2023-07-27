@@ -1,0 +1,29 @@
+{% extends 'adminLoginApp/index.html' %}
+
+{% block content %}
+<h2>Permission List</h2>
+<ul class="list-group">
+  {% for permission in permissions %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+         {{ permission.name }}        
+    
+    <div class="d-flex">
+        <button type="button" class="btn btn-light"><a href="{% url 'update_permission' permission.pk %}" style="color: black;"><i class="bi bi-pen-fill"></i></a></button>
+        
+        <form method="post" action="{% url 'delete_permission' permission.pk %}" id="deleteForm{{ permission.pk }}">
+            {% csrf_token %}
+            <button type="button" class="btn btn-light" onclick="showDeleteConfirmation('{{ permission.pk }}')"> <i class="bi bi-trash-fill"></i></button>
+        </form>
+        
+    </div>
+</li>
+  {% endfor %}
+</ul>
+
+<div class="col d-flex justify-content-end">
+    <a href="{% url 'create_permission' %}" class="btn btn-dark">
+        <i class="bi bi-plus"></i>
+    <b>New Permission</b>
+    </a>
+</div>
+{% endblock %}

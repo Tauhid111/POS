@@ -1,0 +1,16 @@
+{% extends 'sales_homepage.html' %}
+<style>
+    
+</style>
+{% block content %}
+    <h1></h1>
+    <ul class="flex-list">
+        {% for category in categories %}
+        
+            <form method="get" action="{% url 'category_products' category.id %}">
+                <button type="submit" class="animated-button2" style="margin-right: 5px;">{{ category.name }}</button>
+            </form>
+        
+        {% endfor %}
+    </ul>
+{% endblock %}

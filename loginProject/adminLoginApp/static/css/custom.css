@@ -1,0 +1,8 @@
+aside.left-sidebar {
+    position: fixed;
+    overflow-y: auto;
+}
+
+aside.left-sidebar {
+    transition: all 0.7s;
+}

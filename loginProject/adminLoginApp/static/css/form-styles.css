@@ -1,0 +1,36 @@
+/* Apply styles to the form itself */
+form { 
+    margin-bottom: 20px;
+    margin-right: 30%;  
+    margin-left: 10%;
+  }
+  
+  /* Style the form fields */
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the form labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style the form submit button */
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Add any additional custom styles as needed */
+  
