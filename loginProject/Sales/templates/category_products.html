@@ -3,8 +3,9 @@
 {% block content %}
 <h1>{{ category.name }}</h1>
 {% for product in products %}
-    <p>{{ product.name }} - ${{ product.price }}</p>
-    
+    <button type="button" class="product-button">
+        {{ product.name }} - ${{ product.price }}
+    </button>
 {% endfor %}
 <script>
    
